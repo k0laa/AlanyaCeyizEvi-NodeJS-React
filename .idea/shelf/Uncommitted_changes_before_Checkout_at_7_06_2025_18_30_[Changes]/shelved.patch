@@ -1,0 +1,727 @@
+Index: package-lock.json
+===================================================================
+diff --git a/package-lock.json b/package-lock.json
+--- a/package-lock.json	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/package-lock.json	(date 1749309636484)
+@@ -1,21 +1,30 @@
+ {
+-  "name": "untitled",
++  "name": "alanyaceyizevi",
+   "version": "0.1.0",
+   "lockfileVersion": 3,
+   "requires": true,
+   "packages": {
+     "": {
+-      "name": "untitled",
++      "name": "alanyaceyizevi",
+       "version": "0.1.0",
+       "dependencies": {
+-        "@testing-library/dom": "^10.4.0",
++        "@heroicons/react": "^2.1.1",
+         "@testing-library/jest-dom": "^6.6.3",
+         "@testing-library/react": "^16.3.0",
+         "@testing-library/user-event": "^13.5.0",
+-        "react": "^19.1.0",
+-        "react-dom": "^19.1.0",
++        "axios": "^1.9.0",
++        "framer-motion": "^11.0.8",
++        "multer": "^2.0.1",
++        "react": "^18.2.0",
++        "react-dom": "^18.2.0",
++        "react-router-dom": "^6.22.3",
+         "react-scripts": "5.0.1",
+         "web-vitals": "^2.1.4"
++      },
++      "devDependencies": {
++        "autoprefixer": "^10.4.17",
++        "postcss": "^8.4.35",
++        "tailwindcss": "^3.4.1"
+       }
+     },
+     "node_modules/@adobe/css-tools": {
+@@ -2455,6 +2464,15 @@
+         "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+       }
+     },
++    "node_modules/@heroicons/react": {
++      "version": "2.2.0",
++      "resolved": "https://registry.npmjs.org/@heroicons/react/-/react-2.2.0.tgz",
++      "integrity": "sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==",
++      "license": "MIT",
++      "peerDependencies": {
++        "react": ">= 16 || ^19.0.0-rc"
++      }
++    },
+     "node_modules/@humanwhocodes/config-array": {
+       "version": "0.13.0",
+       "resolved": "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.13.0.tgz",
+@@ -3087,6 +3105,15 @@
+         }
+       }
+     },
++    "node_modules/@remix-run/router": {
++      "version": "1.23.0",
++      "resolved": "https://registry.npmjs.org/@remix-run/router/-/router-1.23.0.tgz",
++      "integrity": "sha512-O3rHJzAQKamUz1fvE0Qaw0xSFqsA/yafi2iqeE0pvdFtCO1viYx8QL6f3Ln/aCCTLxs68SLf0KPM9eSeM8yBnA==",
++      "license": "MIT",
++      "engines": {
++        "node": ">=14.0.0"
++      }
++    },
+     "node_modules/@rollup/plugin-babel": {
+       "version": "5.3.1",
+       "resolved": "https://registry.npmjs.org/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz",
+@@ -3440,6 +3467,7 @@
+       "resolved": "https://registry.npmjs.org/@testing-library/dom/-/dom-10.4.0.tgz",
+       "integrity": "sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==",
+       "license": "MIT",
++      "peer": true,
+       "dependencies": {
+         "@babel/code-frame": "^7.10.4",
+         "@babel/runtime": "^7.12.5",
+@@ -3459,6 +3487,7 @@
+       "resolved": "https://registry.npmjs.org/aria-query/-/aria-query-5.3.0.tgz",
+       "integrity": "sha512-b0P0sZPKtyu8HkeRAfCq0IfURZK+SuwMjY1UXGBU27wpAiTwQAIlq56IbIO+ytk/JjS1fMR14ee5WBBfKi5J6A==",
+       "license": "Apache-2.0",
++      "peer": true,
+       "dependencies": {
+         "dequal": "^2.0.3"
+       }
+@@ -3567,7 +3596,8 @@
+       "version": "5.0.4",
+       "resolved": "https://registry.npmjs.org/@types/aria-query/-/aria-query-5.0.4.tgz",
+       "integrity": "sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==",
+-      "license": "MIT"
++      "license": "MIT",
++      "peer": true
+     },
+     "node_modules/@types/babel__core": {
+       "version": "7.20.5",
+@@ -4580,6 +4610,12 @@
+         "node": ">= 8"
+       }
+     },
++    "node_modules/append-field": {
++      "version": "1.0.0",
++      "resolved": "https://registry.npmjs.org/append-field/-/append-field-1.0.0.tgz",
++      "integrity": "sha512-klpgFSWLW1ZEs8svjfb7g4qWY0YS5imI82dTg+QahUvJ8YqAY0P10Uk8tTyh9ZGuYEZEMaeJYCF5BFuX552hsw==",
++      "license": "MIT"
++    },
+     "node_modules/arg": {
+       "version": "5.0.2",
+       "resolved": "https://registry.npmjs.org/arg/-/arg-5.0.2.tgz",
+@@ -4896,6 +4932,33 @@
+         "node": ">=4"
+       }
+     },
++    "node_modules/axios": {
++      "version": "1.9.0",
++      "resolved": "https://registry.npmjs.org/axios/-/axios-1.9.0.tgz",
++      "integrity": "sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==",
++      "license": "MIT",
++      "dependencies": {
++        "follow-redirects": "^1.15.6",
++        "form-data": "^4.0.0",
++        "proxy-from-env": "^1.1.0"
++      }
++    },
++    "node_modules/axios/node_modules/form-data": {
++      "version": "4.0.3",
++      "resolved": "https://registry.npmjs.org/form-data/-/form-data-4.0.3.tgz",
++      "integrity": "sha512-qsITQPfmvMOSAdeyZ+12I1c+CKSstAFAwu+97zrnWAbIr5u8wfsExUzCesVLC8NgHuRUqNN4Zy6UPWUTRGslcA==",
++      "license": "MIT",
++      "dependencies": {
++        "asynckit": "^0.4.0",
++        "combined-stream": "^1.0.8",
++        "es-set-tostringtag": "^2.1.0",
++        "hasown": "^2.0.2",
++        "mime-types": "^2.1.12"
++      },
++      "engines": {
++        "node": ">= 6"
++      }
++    },
+     "node_modules/axobject-query": {
+       "version": "4.1.0",
+       "resolved": "https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz",
+@@ -5368,6 +5431,17 @@
+         "url": "https://github.com/sponsors/sindresorhus"
+       }
+     },
++    "node_modules/busboy": {
++      "version": "1.6.0",
++      "resolved": "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz",
++      "integrity": "sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==",
++      "dependencies": {
++        "streamsearch": "^1.1.0"
++      },
++      "engines": {
++        "node": ">=10.16.0"
++      }
++    },
+     "node_modules/bytes": {
+       "version": "3.1.2",
+       "resolved": "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz",
+@@ -5852,6 +5926,21 @@
+       "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==",
+       "license": "MIT"
+     },
++    "node_modules/concat-stream": {
++      "version": "2.0.0",
++      "resolved": "https://registry.npmjs.org/concat-stream/-/concat-stream-2.0.0.tgz",
++      "integrity": "sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==",
++      "engines": [
++        "node >= 6.0"
++      ],
++      "license": "MIT",
++      "dependencies": {
++        "buffer-from": "^1.0.0",
++        "inherits": "^2.0.3",
++        "readable-stream": "^3.0.2",
++        "typedarray": "^0.0.6"
++      }
++    },
+     "node_modules/confusing-browser-globals": {
+       "version": "1.0.11",
+       "resolved": "https://registry.npmjs.org/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz",
+@@ -6557,6 +6646,7 @@
+       "resolved": "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz",
+       "integrity": "sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==",
+       "license": "MIT",
++      "peer": true,
+       "engines": {
+         "node": ">=6"
+       }
+@@ -6679,7 +6769,8 @@
+       "version": "0.5.16",
+       "resolved": "https://registry.npmjs.org/dom-accessibility-api/-/dom-accessibility-api-0.5.16.tgz",
+       "integrity": "sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==",
+-      "license": "MIT"
++      "license": "MIT",
++      "peer": true
+     },
+     "node_modules/dom-converter": {
+       "version": "0.2.0",
+@@ -8391,6 +8482,33 @@
+         "url": "https://github.com/sponsors/rawify"
+       }
+     },
++    "node_modules/framer-motion": {
++      "version": "11.18.2",
++      "resolved": "https://registry.npmjs.org/framer-motion/-/framer-motion-11.18.2.tgz",
++      "integrity": "sha512-5F5Och7wrvtLVElIpclDT0CBzMVg3dL22B64aZwHtsIY8RB4mXICLrkajK4G9R+ieSAGcgrLeae2SeUTg2pr6w==",
++      "license": "MIT",
++      "dependencies": {
++        "motion-dom": "^11.18.1",
++        "motion-utils": "^11.18.1",
++        "tslib": "^2.4.0"
++      },
++      "peerDependencies": {
++        "@emotion/is-prop-valid": "*",
++        "react": "^18.0.0 || ^19.0.0",
++        "react-dom": "^18.0.0 || ^19.0.0"
++      },
++      "peerDependenciesMeta": {
++        "@emotion/is-prop-valid": {
++          "optional": true
++        },
++        "react": {
++          "optional": true
++        },
++        "react-dom": {
++          "optional": true
++        }
++      }
++    },
+     "node_modules/fresh": {
+       "version": "0.5.2",
+       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz",
+@@ -11239,6 +11357,7 @@
+       "resolved": "https://registry.npmjs.org/lz-string/-/lz-string-1.5.0.tgz",
+       "integrity": "sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==",
+       "license": "MIT",
++      "peer": true,
+       "bin": {
+         "lz-string": "bin/bin.js"
+       }
+@@ -11486,12 +11605,45 @@
+         "mkdirp": "bin/cmd.js"
+       }
+     },
++    "node_modules/motion-dom": {
++      "version": "11.18.1",
++      "resolved": "https://registry.npmjs.org/motion-dom/-/motion-dom-11.18.1.tgz",
++      "integrity": "sha512-g76KvA001z+atjfxczdRtw/RXOM3OMSdd1f4DL77qCTF/+avrRJiawSG4yDibEQ215sr9kpinSlX2pCTJ9zbhw==",
++      "license": "MIT",
++      "dependencies": {
++        "motion-utils": "^11.18.1"
++      }
++    },
++    "node_modules/motion-utils": {
++      "version": "11.18.1",
++      "resolved": "https://registry.npmjs.org/motion-utils/-/motion-utils-11.18.1.tgz",
++      "integrity": "sha512-49Kt+HKjtbJKLtgO/LKj9Ld+6vw9BjH5d9sc40R/kVyH8GLAXgT42M2NnuPcJNuA3s9ZfZBUcwIgpmZWGEE+hA==",
++      "license": "MIT"
++    },
+     "node_modules/ms": {
+       "version": "2.1.3",
+       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+       "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+       "license": "MIT"
+     },
++    "node_modules/multer": {
++      "version": "2.0.1",
++      "resolved": "https://registry.npmjs.org/multer/-/multer-2.0.1.tgz",
++      "integrity": "sha512-Ug8bXeTIUlxurg8xLTEskKShvcKDZALo1THEX5E41pYCD2sCVub5/kIRIGqWNoqV6szyLyQKV6mD4QUrWE5GCQ==",
++      "license": "MIT",
++      "dependencies": {
++        "append-field": "^1.0.0",
++        "busboy": "^1.6.0",
++        "concat-stream": "^2.0.0",
++        "mkdirp": "^0.5.6",
++        "object-assign": "^4.1.1",
++        "type-is": "^1.6.18",
++        "xtend": "^4.0.2"
++      },
++      "engines": {
++        "node": ">= 10.16.0"
++      }
++    },
+     "node_modules/multicast-dns": {
+       "version": "7.2.5",
+       "resolved": "https://registry.npmjs.org/multicast-dns/-/multicast-dns-7.2.5.tgz",
+@@ -13643,6 +13795,12 @@
+         "node": ">= 0.10"
+       }
+     },
++    "node_modules/proxy-from-env": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz",
++      "integrity": "sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==",
++      "license": "MIT"
++    },
+     "node_modules/psl": {
+       "version": "1.15.0",
+       "resolved": "https://registry.npmjs.org/psl/-/psl-1.15.0.tgz",
+@@ -13771,10 +13929,13 @@
+       }
+     },
+     "node_modules/react": {
+-      "version": "19.1.0",
+-      "resolved": "https://registry.npmjs.org/react/-/react-19.1.0.tgz",
+-      "integrity": "sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==",
++      "version": "18.3.1",
++      "resolved": "https://registry.npmjs.org/react/-/react-18.3.1.tgz",
++      "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+       "license": "MIT",
++      "dependencies": {
++        "loose-envify": "^1.1.0"
++      },
+       "engines": {
+         "node": ">=0.10.0"
+       }
+@@ -13902,15 +14063,16 @@
+       }
+     },
+     "node_modules/react-dom": {
+-      "version": "19.1.0",
+-      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.1.0.tgz",
+-      "integrity": "sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==",
++      "version": "18.3.1",
++      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz",
++      "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+       "license": "MIT",
+       "dependencies": {
+-        "scheduler": "^0.26.0"
++        "loose-envify": "^1.1.0",
++        "scheduler": "^0.23.2"
+       },
+       "peerDependencies": {
+-        "react": "^19.1.0"
++        "react": "^18.3.1"
+       }
+     },
+     "node_modules/react-error-overlay": {
+@@ -13934,6 +14096,38 @@
+         "node": ">=0.10.0"
+       }
+     },
++    "node_modules/react-router": {
++      "version": "6.30.1",
++      "resolved": "https://registry.npmjs.org/react-router/-/react-router-6.30.1.tgz",
++      "integrity": "sha512-X1m21aEmxGXqENEPG3T6u0Th7g0aS4ZmoNynhbs+Cn+q+QGTLt+d5IQ2bHAXKzKcxGJjxACpVbnYQSCRcfxHlQ==",
++      "license": "MIT",
++      "dependencies": {
++        "@remix-run/router": "1.23.0"
++      },
++      "engines": {
++        "node": ">=14.0.0"
++      },
++      "peerDependencies": {
++        "react": ">=16.8"
++      }
++    },
++    "node_modules/react-router-dom": {
++      "version": "6.30.1",
++      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.30.1.tgz",
++      "integrity": "sha512-llKsgOkZdbPU1Eg3zK8lCn+sjD9wMRZZPuzmdWWX5SUs8OFkN5HnFVC0u5KMeMaC9aoancFI/KoLuKPqN+hxHw==",
++      "license": "MIT",
++      "dependencies": {
++        "@remix-run/router": "1.23.0",
++        "react-router": "6.30.1"
++      },
++      "engines": {
++        "node": ">=14.0.0"
++      },
++      "peerDependencies": {
++        "react": ">=16.8",
++        "react-dom": ">=16.8"
++      }
++    },
+     "node_modules/react-scripts": {
+       "version": "5.0.1",
+       "resolved": "https://registry.npmjs.org/react-scripts/-/react-scripts-5.0.1.tgz",
+@@ -14601,10 +14795,13 @@
+       }
+     },
+     "node_modules/scheduler": {
+-      "version": "0.26.0",
+-      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.26.0.tgz",
+-      "integrity": "sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==",
+-      "license": "MIT"
++      "version": "0.23.2",
++      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz",
++      "integrity": "sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==",
++      "license": "MIT",
++      "dependencies": {
++        "loose-envify": "^1.1.0"
++      }
+     },
+     "node_modules/schema-utils": {
+       "version": "4.3.2",
+@@ -15292,6 +15489,14 @@
+         "node": ">= 0.4"
+       }
+     },
++    "node_modules/streamsearch": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz",
++      "integrity": "sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==",
++      "engines": {
++        "node": ">=10.0.0"
++      }
++    },
+     "node_modules/string_decoder": {
+       "version": "1.3.0",
+       "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz",
+@@ -16351,6 +16556,12 @@
+         "url": "https://github.com/sponsors/ljharb"
+       }
+     },
++    "node_modules/typedarray": {
++      "version": "0.0.6",
++      "resolved": "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz",
++      "integrity": "sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==",
++      "license": "MIT"
++    },
+     "node_modules/typedarray-to-buffer": {
+       "version": "3.1.5",
+       "resolved": "https://registry.npmjs.org/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz",
+@@ -17488,6 +17699,15 @@
+       "integrity": "sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==",
+       "license": "MIT"
+     },
++    "node_modules/xtend": {
++      "version": "4.0.2",
++      "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz",
++      "integrity": "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==",
++      "license": "MIT",
++      "engines": {
++        "node": ">=0.4"
++      }
++    },
+     "node_modules/y18n": {
+       "version": "5.0.8",
+       "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"untitled\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@testing-library/dom\": \"^10.4.0\",\r\n    \"@testing-library/jest-dom\": \"^6.6.3\",\r\n    \"@testing-library/react\": \"^16.3.0\",\r\n    \"@testing-library/user-event\": \"^13.5.0\",\r\n    \"react\": \"^19.1.0\",\r\n    \"react-dom\": \"^19.1.0\",\r\n    \"react-scripts\": \"5.0.1\",\r\n    \"web-vitals\": \"^2.1.4\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": [\r\n      \"react-app\",\r\n      \"react-app/jest\"\r\n    ]\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  }\r\n}\r\n
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/package.json	(date 1749309498680)
+@@ -1,14 +1,18 @@
+ {
+-  "name": "untitled",
++  "name": "alanyaceyizevi",
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
+-    "@testing-library/dom": "^10.4.0",
++    "@heroicons/react": "^2.1.1",
+     "@testing-library/jest-dom": "^6.6.3",
+     "@testing-library/react": "^16.3.0",
+     "@testing-library/user-event": "^13.5.0",
+-    "react": "^19.1.0",
+-    "react-dom": "^19.1.0",
++    "axios": "^1.9.0",
++    "framer-motion": "^11.0.8",
++    "multer": "^2.0.1",
++    "react": "^18.2.0",
++    "react-dom": "^18.2.0",
++    "react-router-dom": "^6.22.3",
+     "react-scripts": "5.0.1",
+     "web-vitals": "^2.1.4"
+   },
+@@ -35,5 +39,10 @@
+       "last 1 firefox version",
+       "last 1 safari version"
+     ]
++  },
++  "devDependencies": {
++    "autoprefixer": "^10.4.17",
++    "postcss": "^8.4.35",
++    "tailwindcss": "^3.4.1"
+   }
+ }
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import logo from './logo.svg';\r\nimport './App.css';\r\n\r\nfunction App() {\r\n  return (\r\n    <div className=\"App\">\r\n      <header className=\"App-header\">\r\n        <img src={logo} className=\"App-logo\" alt=\"logo\" />\r\n        <p>\r\n          Edit <code>src/App.js</code> and save to reload.\r\n        </p>\r\n        <a\r\n          className=\"App-link\"\r\n          href=\"https://reactjs.org\"\r\n          target=\"_blank\"\r\n          rel=\"noopener noreferrer\"\r\n        >\r\n          Learn React\r\n        </a>\r\n      </header>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default App;\r\n
+===================================================================
+diff --git a/src/App.js b/src/App.js
+--- a/src/App.js	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/src/App.js	(date 1749308126022)
+@@ -1,24 +1,32 @@
+-import logo from './logo.svg';
+-import './App.css';
++import React from 'react';
++import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
++import Navbar from './components/Navbar';
++import Footer from './components/Footer';
++import Home from './pages/Home';
++import Products from './pages/Products';
++import ProductDetail from './pages/ProductDetail';
++import Gallery from './pages/Gallery';
++import FAQ from './pages/FAQ';
++import Contact from './pages/Contact';
+ 
+ function App() {
+   return (
+-    <div className="App">
+-      <header className="App-header">
+-        <img src={logo} className="App-logo" alt="logo" />
+-        <p>
+-          Edit <code>src/App.js</code> and save to reload.
+-        </p>
+-        <a
+-          className="App-link"
+-          href="https://reactjs.org"
+-          target="_blank"
+-          rel="noopener noreferrer"
+-        >
+-          Learn React
+-        </a>
+-      </header>
+-    </div>
++    <Router>
++      <div className="flex flex-col min-h-screen">
++        <Navbar />
++        <main className="flex-grow pt-16">
++          <Routes>
++            <Route path="/" element={<Home />} />
++            <Route path="/urunler" element={<Products />} />
++            <Route path="/urunler/:id" element={<ProductDetail />} />
++            <Route path="/galeri" element={<Gallery />} />
++            <Route path="/sss" element={<FAQ />} />
++            <Route path="/iletisim" element={<Contact />} />
++          </Routes>
++        </main>
++        <Footer />
++      </div>
++    </Router>
+   );
+ }
+ 
+Index: src/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport ReactDOM from 'react-dom/client';\r\nimport './index.css';\r\nimport App from './App';\r\nimport reportWebVitals from './reportWebVitals';\r\n\r\nconst root = ReactDOM.createRoot(document.getElementById('root'));\r\nroot.render(\r\n  <React.StrictMode>\r\n    <App />\r\n  </React.StrictMode>\r\n);\r\n\r\n// If you want to start measuring performance in your app, pass a function\r\n// to log results (for example: reportWebVitals(console.log))\r\n// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals\r\nreportWebVitals();\r\n
+===================================================================
+diff --git a/src/index.js b/src/index.js
+--- a/src/index.js	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/src/index.js	(date 1749303634945)
+@@ -4,6 +4,19 @@
+ import App from './App';
+ import reportWebVitals from './reportWebVitals';
+ 
++// Service Worker kaydı
++if ('serviceWorker' in navigator) {
++  window.addEventListener('load', () => {
++    navigator.serviceWorker.register('/service-worker.js')
++      .then(registration => {
++        console.log('ServiceWorker registration successful');
++      })
++      .catch(err => {
++        console.log('ServiceWorker registration failed: ', err);
++      });
++  });
++}
++
+ const root = ReactDOM.createRoot(document.getElementById('root'));
+ root.render(
+   <React.StrictMode>
+Index: public/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <link rel=\"icon\" href=\"%PUBLIC_URL%/favicon.ico\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n    <meta name=\"theme-color\" content=\"#000000\" />\r\n    <meta\r\n      name=\"description\"\r\n      content=\"Web site created using create-react-app\"\r\n    />\r\n    <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo192.png\" />\r\n    <!--\r\n      manifest.json provides metadata used when your web app is installed on a\r\n      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/\r\n    -->\r\n    <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\r\n    <!--\r\n      Notice the use of %PUBLIC_URL% in the tags above.\r\n      It will be replaced with the URL of the `public` folder during the build.\r\n      Only files inside the `public` folder can be referenced from the HTML.\r\n\r\n      Unlike \"/favicon.ico\" or \"favicon.ico\", \"%PUBLIC_URL%/favicon.ico\" will\r\n      work correctly both with client-side routing and a non-root public URL.\r\n      Learn how to configure a non-root public URL by running `npm run build`.\r\n    -->\r\n    <title>React App</title>\r\n  </head>\r\n  <body>\r\n    <noscript>You need to enable JavaScript to run this app.</noscript>\r\n    <div id=\"root\"></div>\r\n    <!--\r\n      This HTML file is a template.\r\n      If you open it directly in the browser, you will see an empty page.\r\n\r\n      You can add webfonts, meta tags, or analytics to this file.\r\n      The build step will place the bundled scripts into the <body> tag.\r\n\r\n      To begin the development, run `npm start` or `yarn start`.\r\n      To create a production bundle, use `npm run build` or `yarn build`.\r\n    -->\r\n  </body>\r\n</html>\r\n
+===================================================================
+diff --git a/public/index.html b/public/index.html
+--- a/public/index.html	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/public/index.html	(date 1749309374282)
+@@ -1,33 +1,51 @@
+ <!DOCTYPE html>
+-<html lang="en">
++<html lang="tr">
+   <head>
+     <meta charset="utf-8" />
+-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
++    <link rel="icon" type="image/png" href="/logo.png" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta name="theme-color" content="#000000" />
+-    <meta
+-      name="description"
+-      content="Web site created using create-react-app"
+-    />
+-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+-    <!--
+-      manifest.json provides metadata used when your web app is installed on a
+-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+-    -->
++    
++    <!-- SEO Meta Etiketleri -->
++    <meta name="description" content="Alanya Çeyiz Evi - El işi, özel tasarım çeyiz ürünleri. Yatak örtüleri, yorganlar, masa örtüleri ve daha fazlası." />
++    <meta name="keywords" content="çeyiz, el işi, yatak örtüsü, yorgan, masa örtüsü, Alanya, Antalya" />
++    <meta name="author" content="Alanya Çeyiz Evi" />
++    
++    <!-- Open Graph Meta Etiketleri -->
++    <meta property="og:title" content="Alanya Çeyiz Evi" />
++    <meta property="og:description" content="El işi, özel tasarım çeyiz ürünleri. Yatak örtüleri, yorganlar, masa örtüleri ve daha fazlası." />
++    <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
++    <meta property="og:url" content="https://alanyaceyizevi.com" />
++    <meta property="og:type" content="website" />
++    
++    <!-- Twitter Card Meta Etiketleri -->
++    <meta name="twitter:card" content="summary_large_image" />
++    <meta name="twitter:title" content="Alanya Çeyiz Evi" />
++    <meta name="twitter:description" content="El işi, özel tasarım çeyiz ürünleri. Yatak örtüleri, yorganlar, masa örtüleri ve daha fazlası." />
++    <meta name="twitter:image" content="%PUBLIC_URL%/logo.png" />
++    
++    <!-- Canonical URL -->
++    <link rel="canonical" href="https://alanyaceyizevi.com" />
++    
++    <!-- Manifest -->
+     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+-    <!--
+-      Notice the use of %PUBLIC_URL% in the tags above.
+-      It will be replaced with the URL of the `public` folder during the build.
+-      Only files inside the `public` folder can be referenced from the HTML.
++    
++    <!-- Apple Touch Icon -->
++    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
++    
++    <title>Alanya Çeyiz Evi - El İşi Çeyiz Ürünleri</title>
+ 
+-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+-      work correctly both with client-side routing and a non-root public URL.
+-      Learn how to configure a non-root public URL by running `npm run build`.
+-    -->
+-    <title>React App</title>
++    <!-- Google Analytics -->
++    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
++    <script>
++      window.dataLayer = window.dataLayer || [];
++      function gtag(){dataLayer.push(arguments);}
++      gtag('js', new Date());
++      gtag('config', 'G-XXXXXXXXXX');
++    </script>
+   </head>
+   <body>
+-    <noscript>You need to enable JavaScript to run this app.</noscript>
++    <noscript>Bu uygulamayı çalıştırmak için JavaScript'i etkinleştirmeniz gerekiyor.</noscript>
+     <div id="root"></div>
+     <!--
+       This HTML file is a template.
+Index: src/index.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body {\r\n  margin: 0;\r\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\r\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\r\n    sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\ncode {\r\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\r\n    monospace;\r\n}\r\n
+===================================================================
+diff --git a/src/index.css b/src/index.css
+--- a/src/index.css	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/src/index.css	(date 1749301955874)
+@@ -1,6 +1,12 @@
++@tailwind base;
++@tailwind components;
++@tailwind utilities;
++
++@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
++
+ body {
+   margin: 0;
+-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
++  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+Index: public/manifest.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"short_name\": \"React App\",\r\n  \"name\": \"Create React App Sample\",\r\n  \"icons\": [\r\n    {\r\n      \"src\": \"favicon.ico\",\r\n      \"sizes\": \"64x64 32x32 24x24 16x16\",\r\n      \"type\": \"image/x-icon\"\r\n    },\r\n    {\r\n      \"src\": \"logo192.png\",\r\n      \"type\": \"image/png\",\r\n      \"sizes\": \"192x192\"\r\n    },\r\n    {\r\n      \"src\": \"logo512.png\",\r\n      \"type\": \"image/png\",\r\n      \"sizes\": \"512x512\"\r\n    }\r\n  ],\r\n  \"start_url\": \".\",\r\n  \"display\": \"standalone\",\r\n  \"theme_color\": \"#000000\",\r\n  \"background_color\": \"#ffffff\"\r\n}\r\n
+===================================================================
+diff --git a/public/manifest.json b/public/manifest.json
+--- a/public/manifest.json	(revision 2f0f04fe44e960cbdb86bdd4e1b285c7813ef31c)
++++ b/public/manifest.json	(date 1749308166112)
+@@ -1,25 +1,21 @@
+ {
+-  "short_name": "React App",
+-  "name": "Create React App Sample",
+-  "icons": [
+-    {
+-      "src": "favicon.ico",
+-      "sizes": "64x64 32x32 24x24 16x16",
+-      "type": "image/x-icon"
+-    },
+-    {
+-      "src": "logo192.png",
+-      "type": "image/png",
+-      "sizes": "192x192"
+-    },
+-    {
+-      "src": "logo512.png",
+-      "type": "image/png",
+-      "sizes": "512x512"
+-    }
+-  ],
++  "short_name": "Çeyiz Evi",
++  "name": "Alanya Çeyiz Evi",
+   "start_url": ".",
+   "display": "standalone",
+   "theme_color": "#000000",
+-  "background_color": "#ffffff"
++  "background_color": "#ffffff",
++  "orientation": "portrait",
++  "description": "Alanya Çeyiz Evi - El işi, özel tasarım çeyiz ürünleri",
++  "dir": "ltr",
++  "lang": "tr",
++  "prefer_related_applications": false,
++  "categories": ["shopping", "lifestyle"],
++  "screenshots": [
++    {
++      "src": "screenshot1.png",
++      "sizes": "1280x720",
++      "type": "image/png"
++    }
++  ]
+ }
